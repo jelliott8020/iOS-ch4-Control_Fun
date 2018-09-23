@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var numberField: UITextField!
     @IBOutlet weak var sliderLabel: UILabel!
+    @IBOutlet weak var leftSwitch: UISwitch!
+    @IBOutlet weak var rightSwitch: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,5 +39,14 @@ class ViewController: UIViewController {
         sliderLabel.text = "\(lroundf(sender.value))"
     }
     
+    @IBAction func onSwitchChanged(_ sender: UISwitch) {
+        let setting = sender.isOn
+        leftSwitch.setOn(setting, animated: true)
+        rightSwitch.setOn(setting, animated: true)
+        
+    }
+    
+    @IBAction func toggleControls(_ sender: UISegmentedControl) {
+    }
 }
 
