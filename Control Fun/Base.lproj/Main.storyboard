@@ -27,15 +27,36 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="textFieldDoneEditingWithSender:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="glp-Wj-crq"/>
+                                </connections>
                             </textField>
                             <textField clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type a number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H0y-vA-FxL">
                                 <rect key="frame" x="101" y="328" width="258" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <action selector="textFieldDoneEditingWithSender:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="SSY-qe-DGw"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CfB-Q1-4Dz">
                                 <rect key="frame" x="16" y="328" width="67" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="1" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Ppb-F3-b6c">
+                                <rect key="frame" x="51" y="413" width="308" height="30"/>
+                                <connections>
+                                    <action selector="onSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="bDp-98-6CJ"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="REs-FB-Inn">
+                                <rect key="frame" x="16" y="417" width="29" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="29" id="bTT-Oq-MC1"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -48,25 +69,46 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Xdq-FV-i6E" firstAttribute="leading" secondItem="H0y-vA-FxL" secondAttribute="leading" id="5Rq-8q-n9L"/>
+                            <constraint firstItem="Ppb-F3-b6c" firstAttribute="leading" secondItem="REs-FB-Inn" secondAttribute="trailing" constant="8" symbolic="YES" id="B7J-4x-zMl"/>
                             <constraint firstItem="hf0-tJ-2PX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="107" id="CGl-zW-vvd"/>
                             <constraint firstItem="hf0-tJ-2PX" firstAttribute="leading" secondItem="Xdq-FV-i6E" secondAttribute="leading" id="HUM-Ab-kKV"/>
+                            <constraint firstItem="REs-FB-Inn" firstAttribute="leading" secondItem="CfB-Q1-4Dz" secondAttribute="leading" id="J1J-LL-C2X"/>
                             <constraint firstItem="gEf-rR-H11" firstAttribute="trailing" secondItem="CfB-Q1-4Dz" secondAttribute="trailing" id="JCG-Lo-GHx"/>
                             <constraint firstItem="H0y-vA-FxL" firstAttribute="top" secondItem="Xdq-FV-i6E" secondAttribute="bottom" constant="29" id="JEJ-mU-WJM"/>
+                            <constraint firstItem="Ppb-F3-b6c" firstAttribute="top" secondItem="H0y-vA-FxL" secondAttribute="bottom" constant="55" id="Mo0-sw-qZk"/>
+                            <constraint firstItem="REs-FB-Inn" firstAttribute="centerY" secondItem="Ppb-F3-b6c" secondAttribute="centerY" id="XSe-dq-WI7"/>
                             <constraint firstItem="Xdq-FV-i6E" firstAttribute="trailing" secondItem="H0y-vA-FxL" secondAttribute="trailing" id="bXt-4x-oCW"/>
                             <constraint firstItem="CfB-Q1-4Dz" firstAttribute="top" secondItem="H0y-vA-FxL" secondAttribute="top" id="dLh-Yg-4ta"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="REs-FB-Inn" secondAttribute="bottom" constant="229" id="dVt-gE-rwW"/>
                             <constraint firstItem="gEf-rR-H11" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="249" id="iOG-KM-2dX"/>
                             <constraint firstItem="hf0-tJ-2PX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iXy-p4-6Rg"/>
                             <constraint firstItem="CfB-Q1-4Dz" firstAttribute="width" secondItem="gEf-rR-H11" secondAttribute="width" id="k4B-TQ-b1I"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ppb-F3-b6c" secondAttribute="bottom" constant="225" id="kHu-c1-gf0"/>
                             <constraint firstItem="Xdq-FV-i6E" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="s4p-2N-Fwk"/>
                             <constraint firstItem="CfB-Q1-4Dz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ttH-7r-9QP"/>
                             <constraint firstItem="gEf-rR-H11" firstAttribute="top" secondItem="Xdq-FV-i6E" secondAttribute="top" id="vtp-lZ-fJw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ppb-F3-b6c" secondAttribute="trailing" constant="18" id="xHz-MZ-xtW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="tW0-Yp-4fT" appends="YES" id="C6q-Df-IKD"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="nameField" destination="Xdq-FV-i6E" id="ggD-p6-Cy2"/>
+                        <outlet property="numberField" destination="H0y-vA-FxL" id="wXz-mv-YyT"/>
+                        <outlet property="sliderLabel" destination="REs-FB-Inn" id="W3K-Gd-Kuh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="tW0-Yp-4fT">
+                    <connections>
+                        <action selector="onTapGestureRecognized:" destination="BYZ-38-t0r" id="oSR-b5-br0"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="88.799999999999997" y="118.29085457271366"/>
         </scene>
