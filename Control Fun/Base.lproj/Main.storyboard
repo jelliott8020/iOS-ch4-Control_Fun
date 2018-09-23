@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +14,64 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Control_Fun" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="apress_logo" translatesAutoresizingMaskIntoConstraints="NO" id="hf0-tJ-2PX">
+                                <rect key="frame" x="101" y="127" width="172" height="80"/>
+                            </imageView>
+                            <textField clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type in a name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xdq-FV-i6E">
+                                <rect key="frame" x="101" y="269" width="258" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
+                            </textField>
+                            <textField clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type a number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H0y-vA-FxL">
+                                <rect key="frame" x="101" y="328" width="258" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CfB-Q1-4Dz">
+                                <rect key="frame" x="16" y="328" width="67" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gEf-rR-H11">
+                                <rect key="frame" x="16" y="269" width="67" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Xdq-FV-i6E" firstAttribute="leading" secondItem="H0y-vA-FxL" secondAttribute="leading" id="5Rq-8q-n9L"/>
+                            <constraint firstItem="hf0-tJ-2PX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="107" id="CGl-zW-vvd"/>
+                            <constraint firstItem="hf0-tJ-2PX" firstAttribute="leading" secondItem="Xdq-FV-i6E" secondAttribute="leading" id="HUM-Ab-kKV"/>
+                            <constraint firstItem="gEf-rR-H11" firstAttribute="trailing" secondItem="CfB-Q1-4Dz" secondAttribute="trailing" id="JCG-Lo-GHx"/>
+                            <constraint firstItem="H0y-vA-FxL" firstAttribute="top" secondItem="Xdq-FV-i6E" secondAttribute="bottom" constant="29" id="JEJ-mU-WJM"/>
+                            <constraint firstItem="Xdq-FV-i6E" firstAttribute="trailing" secondItem="H0y-vA-FxL" secondAttribute="trailing" id="bXt-4x-oCW"/>
+                            <constraint firstItem="CfB-Q1-4Dz" firstAttribute="top" secondItem="H0y-vA-FxL" secondAttribute="top" id="dLh-Yg-4ta"/>
+                            <constraint firstItem="gEf-rR-H11" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="249" id="iOG-KM-2dX"/>
+                            <constraint firstItem="hf0-tJ-2PX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iXy-p4-6Rg"/>
+                            <constraint firstItem="CfB-Q1-4Dz" firstAttribute="width" secondItem="gEf-rR-H11" secondAttribute="width" id="k4B-TQ-b1I"/>
+                            <constraint firstItem="Xdq-FV-i6E" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="s4p-2N-Fwk"/>
+                            <constraint firstItem="CfB-Q1-4Dz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ttH-7r-9QP"/>
+                            <constraint firstItem="gEf-rR-H11" firstAttribute="top" secondItem="Xdq-FV-i6E" secondAttribute="top" id="vtp-lZ-fJw"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="88.799999999999997" y="118.29085457271366"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="apress_logo" width="172" height="80"/>
+    </resources>
 </document>
