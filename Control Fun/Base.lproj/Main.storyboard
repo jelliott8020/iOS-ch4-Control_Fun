@@ -89,9 +89,13 @@
                                     <action selector="onSwitchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Hg3-Wk-Coy"/>
                                 </connections>
                             </switch>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oXR-5B-OmX">
-                                <rect key="frame" x="17" y="571" width="340" height="31"/>
-                                <state key="normal" title="Do Something"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oXR-5B-OmX">
+                                <rect key="frame" x="19" y="571" width="340" height="31"/>
+                                <state key="normal" title="Do Something" backgroundImage="whiteButton"/>
+                                <state key="highlighted" backgroundImage="blueButton"/>
+                                <connections>
+                                    <action selector="onButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yNs-EB-Nec"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -135,6 +139,7 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="doSomethingButton" destination="oXR-5B-OmX" id="WuF-Pt-8Tt"/>
                         <outlet property="leftSwitch" destination="PQF-JF-coG" id="AW4-1W-Cqm"/>
                         <outlet property="nameField" destination="Xdq-FV-i6E" id="ggD-p6-Cy2"/>
                         <outlet property="numberField" destination="H0y-vA-FxL" id="wXz-mv-YyT"/>
@@ -154,5 +159,7 @@
     </scenes>
     <resources>
         <image name="apress_logo" width="172" height="80"/>
+        <image name="blueButton" width="29" height="37"/>
+        <image name="whiteButton" width="29" height="38"/>
     </resources>
 </document>
